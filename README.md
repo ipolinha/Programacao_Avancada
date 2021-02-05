@@ -1,6 +1,5 @@
-
 #Programacao_Avancada
-<font color="red">Lista de Ponteiros</font>
+Lista de Ponteiros
 
 Francisca Paula de Souza Braz
 
