@@ -1,1 +1,34 @@
+#include <stdlib.h>
+#include <stdio.h>
+int main (){
+int i,j;
+int *p, *q;
+//p = i;
+q = &j;
+p = &*&i;
+//i = (*&)j;
+i = *&j;
+i = *&*&j;
+//q = *p;
+i = (*p)++ + *q;
+//printf("operacao: A=%d ;\n ",p = i);
+printf(" B=%d ;\n ",q = &j);
+printf(" C=%d ;\n ",p = &*&i);
+//printf("operacao: D=%d ;\n ",i = (*&)j);
+printf(" E=%d ;\n ",i = *&j);
+printf(" F=%d ;\n ",i = *&*&j);
+//printf("operacao: G=%d ;\n ",q = *p);
+printf(" H=%d ;\n ",i = (*p)++ + *q);
 
+
+}
+SAIDA:
+ B=6487560 ;
+ C=6487564 ;
+ E=61 ;
+ F=61 ;
+ H=122 ;
+Resposta:
+(a)
+(d) // porque a ordem de precedência começa nos operadores * e & não identificam o tratamento prioritário. 
+(g) // o ponteiro tende a aceitar localizações de valores atribuídos para as variáveis.
