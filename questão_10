@@ -56,4 +56,4 @@ para o vetor x do tipo double:
 x + 1  = 4100
 x + 2  = 4108
 x + 3  = 4116
-//os valores idealizados são igual ao do programa;
+//os valores idealizados são igual ao do programa
