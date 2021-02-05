@@ -1,1 +1,22 @@
+#include <stdlib.h>
+#include <stdio.h>
+int main (){
+int pulo[5]={0,1,22,3,4};
+*(pulo + 2);
+*(pulo + 4);
+pulo + 4;
+pulo + 2;
+printf("%d \n",*(pulo + 2) );
+printf("%d \n",*(pulo + 4) );
+printf("%d \n", (pulo + 2) );
+printf("%d \n", (pulo + 4) );
+}
 
+SAIDA:
+22
+4
+6487560
+6487568
+
+Resposta:
+*(pulo + 2)
