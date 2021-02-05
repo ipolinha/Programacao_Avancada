@@ -1,1 +1,27 @@
 
+
+#include <stdlib.h>
+#include <stdio.h>
+int main(){
+
+      int vet[] = {4,9,13};
+      int i;
+      for(i=0;i<3;i++){
+        printf("%d ",*(vet+i)); //
+      }
+    }
+SAIDA:
+62FE10 62FE14 62FE18
+// O programa abaixo imprime os valores de cada variável que está dentro do vetor incrementando 1 no ponteiro, onde aponta para o vetor.
+
+
+int main(){
+  int vet[] = {4,9,13};
+  int i;
+  for(i=0;i<3;i++){
+    printf("%X ",vet+i);
+  }
+}
+SAIDA:
+4 9 13
+// O programa abaixo imprime os endereços de memória de cada uma das variáveis dentro do vetor. Usando um for para checar todas as variáveis do vetor.
