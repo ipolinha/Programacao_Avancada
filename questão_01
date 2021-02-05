@@ -1,1 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
 
+int main (){
+	
+int i=3,j=5;
+int *p, *q ,p1, p2;
+p = &i;
+q = &j;
+p == &i;
+**&p;
+p1= *p - *q;
+p2=3 - (*p)/(*q) + 7;
+printf("operacao: a=%d ;\n ",p == &i);
+
+printf("operacao: c=%d ;\n ", **&p);
+
+printf("operacao: b=%d ; d=%d ",p1,p2);
+
+}
+
+saida:
+a=1
+b=-2
+c=3
+d=10
