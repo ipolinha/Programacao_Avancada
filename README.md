@@ -1,6 +1,6 @@
 
 #Programacao_Avancada
-<p style='color:red'> Lista de Ponteiros text.</p>
+<font color="red">Lista de Ponteiros</font>
 
 Francisca Paula de Souza Braz
 
