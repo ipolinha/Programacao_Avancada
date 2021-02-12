@@ -1,1 +1,68 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<time.h>
 
+//Funcoes para a troca com ponteiros
+void troca(int* a, int* b) {
+   int aux = *a;
+   *a = *b;
+   *b = aux;
+}
+
+void bolha (int *primeiro, int *ultimo) {
+   int naoTrocou;
+   int *posAtual;
+   for (; ultimo > primeiro; --ultimo) {
+      naoTrocou = 1;
+      for (posAtual = primeiro; posAtual < ultimo; ++posAtual) {
+         if (*posAtual > *(posAtual+1)) {
+            troca (posAtual, posAtual+1);
+            naoTrocou = 0;
+         }
+      }
+      if (naoTrocou) return;
+   }
+}
+
+void exibir(int *primeiro, int n) {
+   int i = 0;
+   for (; i < n; i++) {
+      printf("%d ", primeiro[i]);
+   }
+}
+
+int main() {
+    int n, i;
+    float *x, aux;
+
+    printf("Digite a quantidade de números: ");
+    scanf("%d", &n);
+    x = (float*)malloc(n*sizeof(float));
+    srand(time(0));
+
+
+    for (i=0; i<n; i++){
+        //Gerando numeros de 0 a 100 de forma aleatória
+        x[i] = rand()%100;
+    }
+
+
+    //Antes da funcao agiar
+    printf("\nValores nao organizados: \n");
+    for (i=0; i<n; i++){
+        printf("Valor de [%d]: - %.1f", i, x[i]);
+        printf("\n");
+    }
+
+    bolha(x, &x[n]); //Organizar o vetor X com N elementos
+
+    //Depois da funcao agiar
+    printf("\nValores organizados: \n");
+    for (i=0; i<n; i++){
+        printf("Valor de [%d]: - %.1f", i, x[i]);
+        printf("\n");
+    }
+
+    free(x);
+    return(0);
+}
